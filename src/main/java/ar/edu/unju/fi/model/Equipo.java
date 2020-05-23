@@ -1,5 +1,7 @@
 package ar.edu.unju.fi.model;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Esta clase representa a cualquier equipo registrado 
  * en la pagina web. Es necesario considerar que solamente
@@ -9,6 +11,7 @@ package ar.edu.unju.fi.model;
  *
  */
 
+@Component
 public class Equipo{
 	
 	/*

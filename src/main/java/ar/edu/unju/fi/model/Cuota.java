@@ -3,11 +3,14 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Esta clase representa la cuota de que pagan los socios.
  * @author Nahuel Alberto Cachambi
  *
  */
+@Component
 public class Cuota {
 	
 	/*

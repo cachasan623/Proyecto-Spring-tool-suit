@@ -3,6 +3,8 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Esta clase representa a los usuarios que estan registrados en la
  * pagina web. Es necesario considerar que existe tres tipos de usuarios
@@ -11,6 +13,8 @@ import java.time.LocalDate;
  * @author Nahuel Alberto Cachambi
  *
  */
+
+@Component
 public class Usuario {
 	
 	/*

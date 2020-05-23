@@ -3,11 +3,15 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Esta clase representa cualquier noticia acerca del futbol 
  * @author Nahuel Alberto Cachambi
  *
  */
+
+@Component
 public class Noticia {
 	
 	/*
