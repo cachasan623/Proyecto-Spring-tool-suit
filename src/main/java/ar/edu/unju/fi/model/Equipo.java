@@ -1,5 +1,6 @@
 package ar.edu.unju.fi.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -24,6 +25,8 @@ public class Equipo{
 	 * Atributo que representa el nombre del equipo
 	 */
 	private String nombre;
+	
+	@Autowired
 	
 	/**
 	 * Atributo que representa el estadio del equipo

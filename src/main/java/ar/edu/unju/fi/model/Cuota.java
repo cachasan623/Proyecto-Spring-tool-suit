@@ -3,6 +3,7 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -44,10 +45,12 @@ public class Cuota {
 	 */
 	private String estado;
 	
+	@Autowired
+	
 	/**
 	 * Atributo que representa el usuario
 	 */
-	private Usuario usuario;
+	private Usuario socio;
 	
 	/*
 	 * --------------------------
@@ -71,13 +74,13 @@ public class Cuota {
 	 * @param estado valor del estado de la cuota del usuario
 	 * @param usuario valor del usuario
 	 */
-	public Cuota(long id, LocalDate fechaPago, String periodo, double monto, String estado, Usuario usuario) {
+	public Cuota(long id, LocalDate fechaPago, String periodo, double monto, String estado, Usuario socio) {
 		this.id = id;
 		this.fechaPago = fechaPago;
 		this.periodo = periodo;
 		this.monto = monto;
 		this.estado = estado;
-		this.usuario = usuario;
+		this.socio = socio;
 	}
 
 	/*
@@ -170,16 +173,16 @@ public class Cuota {
 	 * Devuelve el usuario
 	 * @return this.usuario
 	 */
-	public Usuario getUsuario() {
-		return usuario;
+	public Usuario getSocio() {
+		return socio;
 	}
 
 	/**
 	 * Asigna un valor al usuario
 	 * @param usuario valor del usuario
 	 */
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	public void setUsuario(Usuario socio) {
+		this.socio = socio;
 	}
 
 	/**
@@ -190,7 +193,7 @@ public class Cuota {
 	@Override
 	public String toString() {
 		return "Cuota [id=" + id + ", fechaPago=" + fechaPago + ", periodo=" + periodo + ", monto=" + monto
-				+ ", estado=" + estado + ", usuario=" + usuario + "]";
+				+ ", estado=" + estado + ", usuario=" + socio + "]";
 	}
 		
 
