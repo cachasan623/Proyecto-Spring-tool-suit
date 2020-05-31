@@ -1,84 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
-<title>Fixture y Resultados </title>
-<link rel="stylesheet"  href="css/fixture.css">
+<title>Fixture y Resultados</title>
+<link rel="stylesheet" href="css/fixture.css">
 </head>
 <body>
-<div  id="Contenedor">   
-    <header>
-   <h1> Liga de fútbol profesional</h1>
-    </header>
+	<div id="Contenedor">
+		<header>
+			<h1>Liga de fútbol profesional</h1>
+		</header>
 
- <nav class="menu">
-     <ul>
-         <li><a href="Index.html">Home</a></li>
-         <li><a href="fixture.html">Fixture y Resultados</a></li>
-         <li><a href="equipos.html">Equipos</a></li>
-     </ul>
- </nav>
- 
- <section id="Contenido">
-     <h2>Fixture y Resultados</h2>
+		<nav class="menu">
+			<ul>
+				<li><a href="Index.html">Home</a></li>
+				<li><a href="fixture.html">Fixture y Resultados</a></li>
+				<li><a href="equipos.html">Equipos</a></li>
+			</ul>
+			<div id="welcome">
+				<h4 th:text=" 'Bienvenido! '+ ${usuario}"></h4>
+			</div>
+		</nav>
 
-         <table class="resultados">
-          <tr>
-             <th> <strong>Fecha</strong> </th>
-             <th colspan="3" ><strong>Equipo1</strong> </th>
-             <th colspan="3"> <strong>Equipo2</strong> </th>
-          </tr>
+		<section id="Contenido">
+			<h2>Fixture y Resultados</h2>
 
-          <tr>
-           <td> <time>01/03/2020</time></td>
-           <td> <img src="img/boca juniors.png"> </td>
-           <td> <p>Boca Juniors</p></td>
-           <td> <p>2</p></td>
-           <td> <img src="img/river plate.jpg"></td>
-           <td> <p>River Plate</p></td>
-           <td> <p>3</p></td>
-          </tr>
+			<table class="resultados">
+				<tr>
+					<th><strong>Fecha</strong></th>
+					<th colspan="3"><strong>Equipo1</strong></th>
+					<th colspan="3"><strong>Equipo2</strong></th>
+				</tr>
 
-          <tr>
-            <td> <time>02/03/2020</time></td>
-            <td> <img src="img/club independiente.png"> </td>
-            <td> <p>Independiente</p></td>
-            <td> <p>1</p></td>
-            <td> <img src="img/defensa y justicia.jpg"></td>
-            <td> <p>Defensa y Justicia</p></td>
-            <td> <p>5</p></td>
-           </tr>
+				<tr>
+					<td><time>01/03/2020</time></td>
+					<td><img src="img/boca juniors.png"></td>
+					<td>
+						<p>Boca Juniors</p>
+					</td>
+					<td>
+						<p>2</p>
+					</td>
+					<td><img src="img/river plate.jpg"></td>
+					<td>
+						<p>River Plate</p>
+					</td>
+					<td>
+						<p>3</p>
+					</td>
+				</tr>
 
-           <tr>
-            <td> <time>03/03/2020</time></td>
-            <td> <img src="img/San lorenzo.jpg"> </td>
-            <td> <p>San Lorenzo</p></td>
-            <td> <p>3</p></td>
-            <td> <img src="img/velez sarfield.png"></td>
-            <td> <p>Velez Sarfield</p></td>
-            <td> <p>0</p></td>
-           </tr>
+				<tr>
+					<td><time>02/03/2020</time></td>
+					<td><img src="img/club independiente.png"></td>
+					<td>
+						<p>Independiente</p>
+					</td>
+					<td>
+						<p>1</p>
+					</td>
+					<td><img src="img/defensa y justicia.jpg"></td>
+					<td>
+						<p>Defensa y Justicia</p>
+					</td>
+					<td>
+						<p>5</p>
+					</td>
+				</tr>
 
-         </table>
+				<tr>
+					<td><time>03/03/2020</time></td>
+					<td><img src="img/San lorenzo.jpg"></td>
+					<td>
+						<p>San Lorenzo</p>
+					</td>
+					<td>
+						<p>3</p>
+					</td>
+					<td><img src="img/velez sarfield.png"></td>
+					<td>
+						<p>Velez Sarfield</p>
+					</td>
+					<td>
+						<p>0</p>
+					</td>
+				</tr>
+
+			</table>
 
 
-  </section>
+		</section>
 
-  <aside>
-     <h2>Auspiciantes</h2>
-         
-      <img   class="img1"  src="img/portada-cuando-saldra-fifa-21.jpg"> 
-      <img   class="img2"   src="img/puma marca.jpg"> 
-      <img   class="img3"    src="img/Santander-Rojo.jpg"> 
-      <img   class="img4"    src="img/yamaha.jpg"> 
-     
-     
-  </aside>
-  
-   <footer>
-    <h2>Avda. Pedro Ortiz de Zarate N° 455 - Tel 388 4789555</h2>
-   </footer>
+		<aside>
+			<h2>Auspiciantes</h2>
 
-</div>
+			<img class="img1" src="img/portada-cuando-saldra-fifa-21.jpg">
+			<img class="img2" src="img/puma marca.jpg"> <img class="img3"
+				src="img/Santander-Rojo.jpg"> <img class="img4"
+				src="img/yamaha.jpg">
+
+
+		</aside>
+
+		<footer>
+			<h2>Avda. Pedro Ortiz de Zarate N° 455 - Tel 388 4789555</h2>
+		</footer>
+
+	</div>
 </body>
 </html>

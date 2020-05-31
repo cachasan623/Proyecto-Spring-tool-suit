@@ -47,6 +47,15 @@ header h1{
     overflow: scroll;
 }
 
+#welcome {
+	color: green;
+	float: right;
+	margin-top: -90px;
+	margin-right:40px;
+	font-size: 25px;
+}
+
+
 #Contenido h2 {
     height: 60px;
     background-color: #0099ff;

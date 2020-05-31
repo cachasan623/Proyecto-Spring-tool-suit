@@ -1,114 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
-<title>Equipos de fútbol </title>
-<link rel="stylesheet"  href="css/equipos.css">
+<title>Equipos de fútbol</title>
+<link rel="stylesheet" href="css/equipos.css">
 </head>
 <body>
-<div  id="Contenedor">   
-    <header>
-   <h1> Liga de fútbol profesional</h1>
-    </header>
+	<div id="Contenedor">
+		<header>
+			<h1>Liga de fútbol profesional</h1>
+		</header>
 
- <nav class="menu">
-     <ul>
-         <li><a href="Index.html">Home</a></li>
-         <li><a href="fixture.html">Fixture y Resultados</a></li>
-         <li><a href="equipos.html">Equipos</a></li>
-     </ul>
- </nav>
- 
- <section id="Contenido">
-     <h2>Equipos</h2>
+		<nav class="menu">
+			<ul>
+				<li><a href="Index.html">Home</a></li>
+				<li><a href="fixture.html">Fixture y Resultados</a></li>
+				<li><a href="equipos.html">Equipos</a></li>
+			</ul>
+			<div id="welcome">
+				<h4 th:text=" 'Bienvenido! '+ ${usuario}"></h4>
+			</div>
+		</nav>
 
-         <table>
-          <tr>
-              <th><strong>Equipos</strong></th>
-              <th><strong>Historia</strong>
-              </th>
-        </tr>
-          
-        <tr>
-            <td><img  src="img/San lorenzo.jpg"></td>
-            <td>
-                <blockquote>
-                    <p>
-                        San Lorenzo de Almagro fue fundado el 1 de abril de 1908 en el barrio de Almagro de la ciudad de Buenos Aires.
-                        Actualmente su director tecnico es Mariano Soso.Su estadio, el Pedro Bidegain, más 
-                        conocido como El Nuevo Gasómetro y la Ciudad Deportiva se encuentran ubicados 
-                        en la Comuna 7 de la ciudad de Buenos Aires, en el barrio de Bajo Flores, 
-                        tiene capacidad para 47 964 espectadores y está dentro de los diez estadios más 
-                        grandes de Argentina. Su anterior estadio, denominado Estadio 
-                        El Gasómetro (expropiado por un gobierno de facto) se encontraba en el actual 
-                        barrio de Boedo y llegó a un aforo de 76 000 personas. Conocido como 
-                        el "Wembley de Boedo", fue el estadio utilizado por la selección Argentina.</p> 
-                        <p>San Lorenzo de Almagro obtuvo 24 títulos.En el plano local ganó 15 campeonatos de 
-                        Primera División, 2 copas nacionales y 2 títulos de la segunda división (1 en el amateurismo
-                        y 1 en el profesionalismo). En el medio internacional, ha alzado 5 títulos, 
-                        3 de ellos a nivel confederativo e interconfederativo (Conmebol y FIFA), y los
-                         otros dos en el ámbito rioplatense (AFA-AUF). Es el cuarto equipo más ganador del 
-                         profesionalismo (17 títulos) y también es el tercer mejor equipo de la 
-                         historia de la Primera División de Argentina, según la clasificación 
-                         histórica.
-                         A lo largo de su historia fue campeón de la Supercopa Argentina, fue el
-                          primer campeón de la Copa Sudamericana (en 2002) el único equipo argent
-                          ino que ganó la Copa Mercosur además de ganar la Copa Libertadores 2014 
-                          y ser subcampeón del Mundial de Clubes ese mismo año, lo que lo hace ser 
-                          uno de los 4 clubes argentinos que disputaron una final mundial FIFA.
-                         </p>
-                </blockquote>
-            </td>
-        </tr>
-        <tr>
-            <td><img  src="img/river plate.jpg"></td>
-            <td>
-                <blockquote>
-                    <p>
-                        River Plate fue fundado el 25 de mayo de 1901 en la ciudad de Buenos Aires, por 
-                        la fusión de dos clubes: "Santa Rosa" y "La Rosales", dos equipos del barrio de 
-                        la Boca que mantenían una amistosa rivalidad. Después de varias propuestas, 
-                        decidieron llamarlo "River Plate". Actualmente su director tecnico es Marcelo Gallardo.
-                        La primera cancha estaba ubicada en la Dársena Sur. Pero las mudanzas fueron constantes. 
-                        Se fueron para Sarandí, luego volvieron a La Boca, donde en 1914, levantaron la primer 
-                        canchita con tribuna techada. También pasaron por el centro, hasta afincarse definitivamente
-                         en zona norte, donde el 25 de mayo de 1938 inauguraron el Monumental.
-                    </p>
-                    <p>
-                        Desde el año 1932 donde se consagró por primera vez en su historia como 
-                        Campeón Argentino, el conjunto de River Plate ha sumado hasta el momento 
-                        32 títulos locales, convirtiéndose de esta manera como el equipo que mayor veces 
-                        lo ha conseguido, seguido por su eterno rival (Boca Juniors) con 22. Entre 2010 y 2019, River
-                         obtuvo un total de once títulos, récord para su historia si se repasan todas las décadas 
-                         desde que en 1930 comenzó la era profesional. Con el valor agregado de que en 2015 y 2018 
-                         consiguió dos de sus cuatro Copa Libertadores y de que a una de ellas la celebró nada menos
-                          que ante Boca, su rival de toda la vida, en una final jugada insólitamente en Madrid y c
-                          onsiderada como la más importante a nivel clubes en la historia del fútbol mundial.
-                    </p>
-                </blockquote>
-            </td>
-        </tr>    
+		<section id="Contenido">
+			<h2>Equipos</h2>
 
-         </table>
+			<table>
+				<tr>
+					<th><strong>Equipos</strong></th>
+					<th><strong>Historia</strong></th>
+				</tr>
+
+				<tr>
+					<td><img src="img/San lorenzo.jpg"></td>
+					<td>
+						<blockquote>
+							<p>San Lorenzo de Almagro fue fundado el 1 de abril de 1908
+								en el barrio de Almagro de la ciudad de Buenos Aires.
+								Actualmente su director tecnico es Mariano Soso.Su estadio, el
+								Pedro Bidegain, más conocido como El Nuevo Gasómetro y la Ciudad
+								Deportiva se encuentran ubicados en la Comuna 7 de la ciudad de
+								Buenos Aires, en el barrio de Bajo Flores, tiene capacidad para
+								47 964 espectadores y está dentro de los diez estadios más
+								grandes de Argentina. Su anterior estadio, denominado Estadio El
+								Gasómetro (expropiado por un gobierno de facto) se encontraba en
+								el actual barrio de Boedo y llegó a un aforo de 76 000 personas.
+								Conocido como el "Wembley de Boedo", fue el estadio utilizado
+								por la selección Argentina.</p>
+							<p>San Lorenzo de Almagro obtuvo 24 títulos.En el plano local
+								ganó 15 campeonatos de Primera División, 2 copas nacionales y 2
+								títulos de la segunda división (1 en el amateurismo y 1 en el
+								profesionalismo). En el medio internacional, ha alzado 5
+								títulos, 3 de ellos a nivel confederativo e interconfederativo
+								(Conmebol y FIFA), y los otros dos en el ámbito rioplatense
+								(AFA-AUF). Es el cuarto equipo más ganador del profesionalismo
+								(17 títulos) y también es el tercer mejor equipo de la historia
+								de la Primera División de Argentina, según la clasificación
+								histórica. A lo largo de su historia fue campeón de la Supercopa
+								Argentina, fue el primer campeón de la Copa Sudamericana (en
+								2002) el único equipo argent ino que ganó la Copa Mercosur
+								además de ganar la Copa Libertadores 2014 y ser subcampeón del
+								Mundial de Clubes ese mismo año, lo que lo hace ser uno de los 4
+								clubes argentinos que disputaron una final mundial FIFA.</p>
+						</blockquote>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="img/river plate.jpg"></td>
+					<td>
+						<blockquote>
+							<p>River Plate fue fundado el 25 de mayo de 1901 en la ciudad
+								de Buenos Aires, por la fusión de dos clubes: "Santa Rosa" y "La
+								Rosales", dos equipos del barrio de la Boca que mantenían una
+								amistosa rivalidad. Después de varias propuestas, decidieron
+								llamarlo "River Plate". Actualmente su director tecnico es
+								Marcelo Gallardo. La primera cancha estaba ubicada en la Dársena
+								Sur. Pero las mudanzas fueron constantes. Se fueron para
+								Sarandí, luego volvieron a La Boca, donde en 1914, levantaron la
+								primer canchita con tribuna techada. También pasaron por el
+								centro, hasta afincarse definitivamente en zona norte, donde el
+								25 de mayo de 1938 inauguraron el Monumental.</p>
+							<p>Desde el año 1932 donde se consagró por primera vez en su
+								historia como Campeón Argentino, el conjunto de River Plate ha
+								sumado hasta el momento 32 títulos locales, convirtiéndose de
+								esta manera como el equipo que mayor veces lo ha conseguido,
+								seguido por su eterno rival (Boca Juniors) con 22. Entre 2010 y
+								2019, River obtuvo un total de once títulos, récord para su
+								historia si se repasan todas las décadas desde que en 1930
+								comenzó la era profesional. Con el valor agregado de que en 2015
+								y 2018 consiguió dos de sus cuatro Copa Libertadores y de que a
+								una de ellas la celebró nada menos que ante Boca, su rival de
+								toda la vida, en una final jugada insólitamente en Madrid y c
+								onsiderada como la más importante a nivel clubes en la historia
+								del fútbol mundial.</p>
+						</blockquote>
+					</td>
+				</tr>
+
+			</table>
 
 
-  </section>
+		</section>
 
-  <aside>
-     <h2>Auspiciantes</h2>
-         
-      <img   class="img1"  src="img/portada-cuando-saldra-fifa-21.jpg"> 
-      <img   class="img2"   src="img/puma marca.jpg"> 
-      <img   class="img3"    src="img/Santander-Rojo.jpg"> 
-      <img   class="img4"    src="img/yamaha.jpg"> 
-     
-     
-  </aside>
-  
-   <footer>
-    <h2>Avda. Pedro Ortiz de Zarate N° 455 - Tel 388 4789555</h2>
-   </footer>
+		<aside>
+			<h2>Auspiciantes</h2>
 
-</div>
+			<img class="img1" src="img/portada-cuando-saldra-fifa-21.jpg">
+			<img class="img2" src="img/puma marca.jpg"> <img class="img3"
+				src="img/Santander-Rojo.jpg"> <img class="img4"
+				src="img/yamaha.jpg">
+
+
+		</aside>
+
+		<footer>
+			<h2>Avda. Pedro Ortiz de Zarate N° 455 - Tel 388 4789555</h2>
+		</footer>
+
+	</div>
 </body>
 </html>

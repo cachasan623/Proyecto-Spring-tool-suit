@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -19,6 +19,10 @@
                 <li><a href="fixture.html">Fixture y Resultados</a></li>
                 <li><a href="equipos.html">Equipos</a></li>
             </ul>
+            <div id="welcome">
+				<h4 th:text=" 'Bienvenido! '+ ${usuario}"></h4>
+			</div>
+			
         </nav>
 
         <section id="Contenido">

@@ -25,13 +25,13 @@ public class Cachambi3829Tp5Application implements CommandLineRunner  {
 	@Override
 	public void run(String... args) throws Exception {
 		// Inicializo las variables de mi objeto usuario
-		usuario.setApellido("Perez");
-		usuario.setDireccion("Av Mitre 789");
+		usuario.setApellido("Cachambi");
+		usuario.setDireccion("av El Chalchalero");
 		usuario.setDni(40390080);
 		usuario.setFechaAlta(LocalDate.now());
-		usuario.setFechaNacimiento(LocalDate.of(1991,01, 10));
+		usuario.setFechaNacimiento(LocalDate.of(1997,01, 8));
 		usuario.setId(1);
-		usuario.setNombre("Luis");
+		usuario.setNombre("Nahuel Alberto");
 		usuario.setPassword("123");
 		usuario.setTipo("SOCIO");
 		
